@@ -4,3 +4,5 @@
 
 - @ques ml 怎么改变 list 中的一个元素
 - @ques ml 怎么排序
+- @ques ml 有没有 typeOf
+- @ques ml 泛型
