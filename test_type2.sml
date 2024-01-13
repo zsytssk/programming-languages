@@ -17,7 +17,7 @@ fun full_name1 r =
             x ^ " " ^ y ^ " " ^ z ^ " "
 
 fun full_name2 r =
-    let  val {first=x, middle=y, last=z} = r
+    let  val {fiirst=x, middle=y, last=z} = r
     in
         x ^ " " ^ y ^ " " ^ z ^ " "
     end
