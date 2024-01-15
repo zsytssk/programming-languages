@@ -7,3 +7,5 @@ fun f n =
     else n * n
 
 val x = (f 1 handle List.Empty => 42) handle MyException n => f n
+
+val y = (raise MyException 100) handle MyException n => f n
