@@ -172,3 +172,41 @@ fun officiate(cs: card list, ml: move list, s: int) =
     in
         s3
     end
+
+fun card_value_challenge(_ , r) =
+    case r of
+        Num i => i
+       | Ace => 11
+       | _ => 10
+
+fun sum_cards_challenge(cs: card list) =
+    let fun aux(cs1:card list, acc) =
+            case cs1 of
+                [] => acc
+            |   x::cs' => aux(cs', acc + card_value_challenge(x))
+    in
+        aux(cs, 0)
+    end
+
+(*
+    将ACE一个个的换成NUM1, 然后计算他的值，返回最小的
+    计算ACE的个数
+    一个个的替换求和
+*)
+fun score_challenge(cs: card list, s: int) =
+    let
+        val sum = sum_cards_challenge(cs);
+        val is_same = all_same_color(cs);
+    in
+        if sum >= s
+        then
+            let val res = sum - s;
+            in
+            if is_same then res div 2 else res
+            end
+        else
+            let val res =  s - sum;
+            in
+            if is_same then res div 2 else res
+            end
+    end
