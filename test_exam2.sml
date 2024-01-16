@@ -164,7 +164,7 @@ fun officiate(cs: card list, ml: move list, s: int) =
                                 val cur = c::acc;
                                 val s1 = score(cur, s)
                             in
-                                if s1 > s then acc else run_game(cs1', ml1', c::acc)
+                                if s1 > s then cur else run_game(cs1', ml1', c::acc)
                             end
                     |   Discard c2 => run_game(cs1, ml1', remove_card(acc, c2, IllegalMove))
          val res = run_game(cs, ml, [])
