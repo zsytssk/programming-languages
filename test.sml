@@ -1,1 +1,1 @@
-val a = (1, 2, 3);
+val a = ListPair.zip([1], ["x"])

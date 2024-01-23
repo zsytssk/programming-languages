@@ -1,8 +1,4 @@
-fun count_wild_and_variable_lengths(s) =
-    let
-        fun check_wild () = 1
-        fun check_val (x) = String.size(x)
-        val calc = g check_wild check_val
-    in
-        calc p
-    end
+ (Constructor(s2,v1), ConstructorP(s1, p1)) =>
+                    if s1 <> s2
+                    then NONE
+                    else in_match(p1, v1)
