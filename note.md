@@ -8,3 +8,17 @@
 - @ques ml 泛型 -> `'a`
 
 - @ques add -> int + real
+
+## 2024-01-25 16:11:06
+
+- gcd 是最小公约数？
+
+```sml
+fun gcd (x,y) =
+    if x=y
+    then x
+    else if x < y
+    then gcd(x,y-x)
+    else gcd(y,x)
+
+```
