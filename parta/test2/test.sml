@@ -26,7 +26,7 @@ sig
     val toString : rational -> string
 end
 
-structure Rational1 :> RATIONAL_C =
+structure Rational1 :> RATIONAL_A =
 struct
 (* Invariant 1: all denominators > 0
 Invariant 2: rationals kept in reduced form, including that
