@@ -15,3 +15,11 @@
            [w (+ x 7)])
     (f -9)
     ))
+
+
+(define b 3)
+(define f
+  (let ([b b])
+    (lambda (x) (+ x b))))
+
+(set! b 4)
