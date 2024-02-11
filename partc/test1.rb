@@ -9,19 +9,29 @@ x.my_first_method
 
 
 class A
-    def m1
-        34
+    def initialize(f)
+        @foo = f
     end
-    def m2 (x, y)
-        z = 7
-        if x > y
-            false
-        else
-            x + y * z
-        end
+    def m1
+        @foo = 0
+    end
+    public def m2 x
+        @foo += x
+        @bar = 0
+    end
+    private def foo
+        @foo
+    end
+    def bar
+        @bar
     end
 end
 
-y = A.new
-
-y.m2(10, 12)
+class B
+    def m1
+        34
+    end
+    def m2 x
+        x.abs * 2 + self.m1
+    end
+end
